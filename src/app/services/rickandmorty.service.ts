@@ -15,7 +15,7 @@ export class RickandmortyService {
   getCharacter$():Observable<any>{
     return this.http.get<Observable<Rickandmorty[]>>(`https://rickandmortyapi.com/api/character/${this.value+1},${this.value+2},${this.value+3},${this.value+4},${this.value+5},${this.value+6},${this.value+7},${this.value+8},${this.value+9},${this.value+10}`)
   }
-  getSingleCharacter(id:number):Observable<any>{
+  getSingleCharacter(id:string):Observable<any>{
     
    return this.http.get<Observable<Rickandmorty>>(`https://rickandmortyapi.com/api/character/${id}`)
   }

@@ -1,1 +1,37 @@
-<p>details works!</p>
+<div class="container ">
+    <div class="row mx-auto">
+        <div class="col-lg-6 mt-3">
+            <div class="card"  *ngIf="data">
+                <img [src]=[data.image] class="rounded mx-auto d-block">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.name}}</h5>
+                  <p class="card-text">Id : {{data.id}}</p>
+                  <p class="card-text">Status : {{data.status}}</p>
+                  <p class="card-text">Specie : {{data.species}}</p>
+                  <p class="card-text">Type : {{data.type}}</p>
+                  <p class="card-text">Gender : {{data.gender}}</p>
+                  <p class="card-text">Origin : {{data.origin.name}}</p>
+                  <p class="card-text">Location : {{data.location.name}}</p>
+                  <p class="card-text">Created : {{data.created}}</p>
+                  <p class="card-text">Episodies :  </p>
+                    <ul *ngFor="let e of data.episode">
+                        <li>{{e}}</li>
+                    </ul>
+                 
+
+
+                  <a routerLink="home" class="btn btn-primary">Go Back</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-4 mt-3" *ngIf="isLoading">
+            <div class="spinner-border text-primary " role="status">
+                <span class="visually-hidden " >Loading...</span>
+              </div>
+              
+        </div>
+    </div>
+    
+
+
+</div>

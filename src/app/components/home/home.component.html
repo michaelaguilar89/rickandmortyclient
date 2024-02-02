@@ -15,7 +15,8 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">{{item.name}}</h5>
+                      <p class="card-text">Id : {{item.id}}</p>
+                      <a class="card-title" [routerLink]="['/details/',item.id]">{{item.name}}</a>
                       <p class="card-text">Status : {{item.status}}</p>
                       <p class="card-text">Specie :{{item.species}}</p>
                       <p class="card-text">Gender :{{item.gender}}</p>

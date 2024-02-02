@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
     this.isSuccess=false
     for(let i=0;i<=10;i++){
       setTimeout(() => {
-        this.service.getSingleCharacter(this.service.id).subscribe(
+        this.service.getSingleCharacter(this.service.id.toString()).subscribe(
           (result:any)=>{
             this.list.push(result);
             this.isSuccess=true;
