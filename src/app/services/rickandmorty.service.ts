@@ -9,13 +9,15 @@ import { Rickandmorty } from '../models/rickandmorty';
 export class RickandmortyService {
 
   value=0;
+  id=1;
   constructor(private http:HttpClient) { }
 
   getCharacter$():Observable<any>{
     return this.http.get<Observable<Rickandmorty[]>>(`https://rickandmortyapi.com/api/character/${this.value+1},${this.value+2},${this.value+3},${this.value+4},${this.value+5},${this.value+6},${this.value+7},${this.value+8},${this.value+9},${this.value+10}`)
   }
   getSingleCharacter(id:number):Observable<any>{
-    return this.http.get<Observable<Rickandmorty[]>>(`https://rickandmortyapi.com/api/character/${id}`)
+    
+   return this.http.get<Observable<Rickandmorty>>(`https://rickandmortyapi.com/api/character/${id}`)
   }
   setValue(value:number){
     this.value=0;
