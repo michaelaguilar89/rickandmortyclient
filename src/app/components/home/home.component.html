@@ -1,5 +1,40 @@
 <div class="container" >
 
+
+
+    <div class="searchForm">
+      <form class="mt-4" >
+       
+       <input type="text" name="searchValue" [(ngModel)]="searchValue" (keydown.enter)="send()" placeholder="Search your favorite person" class="form-control" >
+       <div class="row">
+        
+        <div class="col-6">
+          <h3>Status</h3>
+          <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="status"  value="alive"  type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Alive
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="status" value="dead" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Dead
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" [(ngModel)]="status"  value="unknown" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Unknowm
+            </label>
+          </div>
+        </div>  
+        <div class="col-6">
+          
+        </div>      
+      </div>
+      </form>
+    </div>
     <div class="row mt-3">   
         
                

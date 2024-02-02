@@ -1,4 +1,4 @@
-import { Component,OnInit,HostListener } from '@angular/core';
+import { Component,OnInit,HostListener,NgModule } from '@angular/core';
 import { Rickandmorty } from 'src/app/models/rickandmorty';
 import { RickandmortyService } from 'src/app/services/rickandmorty.service';
 
@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   list:any[]|Rickandmorty[]=[]
   isSuccess=false;
   data:any|Rickandmorty;
+  searchValue='';
+  status='';
   /**
    *
    */
@@ -38,6 +40,20 @@ export class HomeComponent implements OnInit {
         this.getData();  
       }, 3000);
     }
+  }
+
+
+  send(){
+    console.log('value : '+this.searchValue+' status : '+this.status)
+    this.service.getByCharacters(this.searchValue,this.status).
+    subscribe(
+      (data:any)=>{
+        this.list=data.results;
+      },(error:any)=>{
+        console.log(error.error);
+        alert(this.searchValue+' not found !');
+      }
+    )
   }
 
   getData(){
