@@ -10,13 +10,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { RickandmortyService } from './services/rickandmorty.service';
+import { DescriptionComponent } from './components/description/description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
