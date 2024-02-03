@@ -24,8 +24,8 @@ export class RickandmortyService {
     
    return this.http.get<Observable<Rickandmorty>>(`https://rickandmortyapi.com/api/character/${id}`)
   }
-  setValue(value:number){
-    this.value=0;
+  setValue(){
+    this.id=0;
   }
 
    sumValue(value$:number){

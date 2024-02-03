@@ -1,12 +1,13 @@
-<div class="container" >
+<div class="container mx-auto" >
 
+    <div class="row">
+      
 
-
-    <div class="searchForm">
-      <form class="mt-4" >
+    <div class="container col-xl-6 col-lg-6 col-md-10 col-sm-10 ">
+      <form class="container mt-4" >
        
-       <input type="text" name="searchValue" [(ngModel)]="searchValue" (keydown.enter)="send()" placeholder="Search your favorite person" class="form-control" >
-       <div class="row">
+       <input type="text" name="searchValue" [(ngModel)]="searchValue" (keydown)="send()" placeholder="Search your favorite person" class="form-control" >
+       <div class="row ">
         
         <div class="col-6">
           <h3>Status</h3>
@@ -67,9 +68,10 @@
 
     </div>
     <div class="col-4 mx-auto">
-        <div class="spinner-border text-primary "  role="status" *ngIf="!isSuccess" style="max-width: 30%;">
+        <div class="spinner-border text-primary "  role="status" *ngIf="isSuccess" style="max-width: 30%;">
             <span class="visually-hidden">Loading...</span>
           </div>
  
+    </div>
     </div>            
 </div>

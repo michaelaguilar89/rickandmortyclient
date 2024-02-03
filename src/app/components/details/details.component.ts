@@ -27,7 +27,7 @@ export class DetailsComponent implements OnInit {
       (params:ParamMap)=>{
         this.id=this.route.snapshot.paramMap.get('id')!
       }
-      
+     
     )
 
     setTimeout(() => {
@@ -40,7 +40,8 @@ export class DetailsComponent implements OnInit {
         }
       )
     }, 1500);
-      
+    
+    this.service.setValue();
   
   }
 
