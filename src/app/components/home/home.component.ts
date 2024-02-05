@@ -33,12 +33,14 @@ export class HomeComponent implements OnInit {
     // Lógica para determinar si el usuario ha llegado al final de la página
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       // Aquí puedes cargar más datos o realizar alguna acción
+      
+      if(this.searchValue.length==0){
+       // this.isSuccess=false;
+      }else{
+       this.getData();
       this.isSuccess=true;
-
-      setTimeout(() => {
-        
-        this.getData();  
-      }, 1000);
+      }
+      
     }
   }
 
